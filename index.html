@@ -49,18 +49,19 @@ img{max-width:100%;display:block}
 /* Buttons */
 .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:1rem;padding:14px 24px;border-radius:999px;transition:.2s transform,.2s box-shadow,.2s background;cursor:pointer;border:none}
 .btn:active{transform:scale(.97)}
-.btn-wa{background:var(--wa);color:#04220f;box-shadow:0 8px 28px rgba(37,211,102,.32)}
-.btn-wa:hover{background:var(--wa-d);box-shadow:0 12px 36px rgba(37,211,102,.45);transform:translateY(-2px)}
+.btn-wa{background:var(--grad);color:#241a0d;box-shadow:0 8px 28px rgba(201,161,94,.35)}
+.btn-wa:hover{filter:brightness(1.08);box-shadow:0 12px 36px rgba(201,161,94,.5);transform:translateY(-2px)}
 .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line2)}
 .btn-ghost:hover{border-color:var(--orange);color:var(--orange)}
 .btn svg{width:20px;height:20px}
+.btn-wa-sm{padding:11px 20px;font-size:.92rem}
 
 /* Header */
 header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,11,9,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:.3s}
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
 .brand{display:flex;align-items:center;gap:11px}
-.logo-chip{background:#12100c;border-radius:11px;padding:8px 14px;display:inline-flex;align-items:center;border:1px solid var(--line2);overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.4)}
-.logo-text{font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;color:var(--amber);letter-spacing:.02em}
+.logo-chip{background:#12100c;border-radius:11px;padding:5px 10px;display:inline-flex;align-items:center;border:1px solid var(--line2);overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.logo-img{height:44px;width:auto;display:block}
 .nav-links{display:flex;align-items:center;gap:30px}
 .nav-links a.lnk{font-weight:600;font-size:.94rem;color:var(--muted);transition:.2s}
 .nav-links a.lnk:hover{color:var(--ink)}
@@ -76,20 +77,20 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,11,9,.7
 
 /* Mobile nav panel */
 .mobile-nav{
-position:fixed;top:68px;left:0;right:0;bottom:0;
-background:rgba(10,8,6,.97);backdrop-filter:blur(18px);
-z-index:45;padding:28px 22px 40px;
-display:flex;flex-direction:column;gap:8px;
-transform:translateX(100%);opacity:0;visibility:hidden;
-transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .3s,visibility .3s;
-overflow-y:auto;
+  position:fixed;top:68px;left:0;right:0;bottom:0;
+  background:rgba(10,8,6,.97);backdrop-filter:blur(18px);
+  z-index:45;padding:28px 22px 40px;
+  display:flex;flex-direction:column;gap:8px;
+  transform:translateX(100%);opacity:0;visibility:hidden;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .3s,visibility .3s;
+  overflow-y:auto;
 }
 .mobile-nav.is-open{transform:translateX(0);opacity:1;visibility:visible}
 .mobile-nav a.mlnk{
-display:flex;align-items:center;gap:14px;
-font-family:'Playfair Display',serif;font-weight:700;font-size:1.45rem;
-color:var(--ink);padding:16px 18px;border-radius:14px;
-border:1px solid transparent;transition:.2s;
+  display:flex;align-items:center;gap:14px;
+  font-family:'Playfair Display',serif;font-weight:700;font-size:1.45rem;
+  color:var(--ink);padding:16px 18px;border-radius:14px;
+  border:1px solid transparent;transition:.2s;
 }
 .mobile-nav a.mlnk:hover,.mobile-nav a.mlnk:focus{background:var(--card);border-color:var(--line2);color:var(--amber)}
 .mobile-nav .m-wa{margin-top:18px;justify-content:center;width:100%}
@@ -173,7 +174,8 @@ section{position:relative}
 .loc{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch}
 .loc .map{border-radius:18px;overflow:hidden;border:1px solid var(--line2);min-height:340px}
 .loc .map iframe{width:100%;height:100%;border:0;min-height:340px;filter:grayscale(.15) contrast(1.05)}
-.info-list{display:grid;gap:18px;align-content:center}
+.info-list{display:grid;gap:18px;align-content:center;justify-items:start}
+.info-list .btn-wa-sm{justify-self:center;margin-top:10px}
 .info-row{display:flex;gap:15px;align-items:flex-start}
 .info-row .ico{width:46px;height:46px;border-radius:12px;flex:none;display:grid;place-items:center;background:var(--card);border:1px solid var(--line2)}
 .info-row .ico svg{width:22px;height:22px;color:var(--orange)}
@@ -185,8 +187,8 @@ section{position:relative}
 .cta-band{background:var(--grad);border-radius:28px;padding:54px 44px;text-align:center;color:#241a0d;position:relative;overflow:hidden}
 .cta-band h2{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;color:#241a0d;margin-bottom:12px}
 .cta-band p{font-size:1.1rem;font-weight:600;color:#43331a;margin-bottom:26px;opacity:.95}
-.cta-band .btn-wa{background:#0d0b09;color:#fff;box-shadow:0 12px 36px rgba(0,0,0,.3)}
-.cta-band .btn-wa:hover{background:#000}
+.cta-band .btn-wa{background:#0d0b09;color:#fff;box-shadow:0 12px 36px rgba(0,0,0,.3);filter:none}
+.cta-band .btn-wa:hover{background:#000;filter:none}
 
 /* Footer */
 footer{background:#0a0806;border-top:1px solid var(--line);padding:56px 0 28px}
@@ -250,7 +252,7 @@ footer{background:#0a0806;border-top:1px solid var(--line);padding:56px 0 28px}
 <header id="top">
 <div class="wrap nav">
 <a href="#top" class="brand" aria-label="Maison Hair — Salão de Beleza em Ipanema">
-<span class="logo-chip"><span class="logo-text">Maison Hair</span></span>
+<span class="logo-chip"><img src="logo.png" alt="Maison Hair — Salão de Beleza em Ipanema" class="logo-img"></span>
 </a>
 <nav class="nav-links" aria-label="Menu principal">
 <a href="#servicos" class="lnk">Serviços</a>
@@ -296,7 +298,7 @@ Rua Visconde de Pirajá, 550 — Ipanema<br>
 <div class="hero-cta">
 <a href="https://wa.me/5521972326847?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Maison%20Hair%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="btn btn-wa" target="_blank" rel="noopener">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-Agendar pelo WhatsApp
+Quero essa experiência
 </a>
 <a href="#servicos" class="btn btn-ghost">Ver serviços</a>
 </div>
@@ -376,7 +378,7 @@ Agendar pelo WhatsApp
 </ul>
 <a href="https://wa.me/5521972326847?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio%20na%20Maison%20Hair." class="btn btn-wa" target="_blank" rel="noopener">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-Falar com o salão
+Tirar dúvidas
 </a>
 </div>
 <div class="media reveal">
@@ -495,7 +497,7 @@ Ver mais no Instagram
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></div>
 <div class="t"><b>Instagram</b><span><a href="https://www.instagram.com/maisonhairrj/" target="_blank" rel="noopener">@maisonhairrj</a> — mais de 200 trabalhos publicados</span></div>
 </div>
-<a href="https://wa.me/5521972326847?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Maison%20Hair%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="btn btn-wa" target="_blank" rel="noopener" style="margin-top:6px">
+<a href="https://wa.me/5521972326847?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Maison%20Hair%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="btn btn-wa btn-wa-sm" target="_blank" rel="noopener">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
 Agendar pelo WhatsApp
 </a>
@@ -523,7 +525,7 @@ Agendar meu horário
 <div class="wrap">
 <div class="foot-grid">
 <div class="foot-brand">
-<span class="logo-chip" style="display:inline-flex;width:max-content;padding:8px 14px"><span class="logo-text">Maison Hair</span></span>
+<span class="logo-chip" style="display:inline-flex;width:max-content;padding:8px 14px"><img src="logo.png" alt="Maison Hair" class="logo-img" style="height:52px"></span>
 <p>Salão de beleza e estética em Ipanema, Rio de Janeiro. Cortes, coloração e mechas, progressiva, tratamentos capilares, manicure, pedicure e estética facial. Transformamos sua beleza.</p>
 </div>
 <div class="foot-col">
@@ -599,11 +601,11 @@ addEventListener('scroll',()=>{document.querySelector('header').style.boxShadow=
 const toggle=document.getElementById('menuToggle');
 const mobileNav=document.getElementById('mobileNav');
 function setMenu(open){
-toggle.classList.toggle('is-open',open);
-mobileNav.classList.toggle('is-open',open);
-document.body.classList.toggle('menu-open',open);
-toggle.setAttribute('aria-expanded',open);
-toggle.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+  toggle.classList.toggle('is-open',open);
+  mobileNav.classList.toggle('is-open',open);
+  document.body.classList.toggle('menu-open',open);
+  toggle.setAttribute('aria-expanded',open);
+  toggle.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
 }
 toggle.addEventListener('click',()=>setMenu(!toggle.classList.contains('is-open')));
 mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
@@ -611,4 +613,3 @@ addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
 </script>
 </body>
 </html>
-
