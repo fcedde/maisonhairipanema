@@ -58,14 +58,18 @@ img{max-width:100%;display:block}
 
 /* Header */
 header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,11,9,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:.3s}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
 .brand{display:flex;align-items:center;gap:11px}
-.logo-chip{background:#12100c;border-radius:11px;padding:5px 10px;display:inline-flex;align-items:center;border:1px solid var(--line2);overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.4)}
-.logo-img{height:44px;width:auto;display:block}
+.logo-chip{background:transparent;border-radius:11px;padding:0;display:inline-flex;align-items:center;border:none;overflow:visible;box-shadow:none}
+.logo-img{height:64px;width:auto;display:block;max-height:64px}
 .nav-links{display:flex;align-items:center;gap:30px}
 .nav-links a.lnk{font-weight:600;font-size:.94rem;color:var(--muted);transition:.2s}
 .nav-links a.lnk:hover{color:var(--ink)}
 .nav .btn{padding:10px 18px;font-size:.92rem}
+.lang-switch{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.06);border:1px solid var(--line2);border-radius:999px;padding:3px;margin-left:8px}
+.lang-switch a{font-size:.78rem;font-weight:700;letter-spacing:.06em;padding:6px 10px;border-radius:999px;color:var(--muted);transition:.2s}
+.lang-switch a:hover{color:var(--ink)}
+.lang-switch a.active{background:var(--grad);color:#241a0d}
 
 /* Hamburger button (mobile only) */
 .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;border-radius:10px;color:var(--ink);transition:.2s}
@@ -77,7 +81,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,11,9,.7
 
 /* Mobile nav panel */
 .mobile-nav{
-  position:fixed;top:68px;left:0;right:0;bottom:0;
+  position:fixed;top:76px;left:0;right:0;bottom:0;
   background:rgba(10,8,6,.97);backdrop-filter:blur(18px);
   z-index:45;padding:28px 22px 40px;
   display:flex;flex-direction:column;gap:8px;
@@ -264,6 +268,10 @@ footer{background:#0a0806;border-top:1px solid var(--line);padding:56px 0 28px}
 Agendar
 </a>
 </nav>
+<div class="lang-switch" aria-label="Idioma">
+<a href="index.html" class="active" hreflang="pt-BR">PT</a>
+<a href="index-en.html" hreflang="en">EN</a>
+</div>
 <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
 <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
 <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -525,7 +533,7 @@ Agendar meu horário
 <div class="wrap">
 <div class="foot-grid">
 <div class="foot-brand">
-<span class="logo-chip" style="display:inline-flex;width:max-content;padding:8px 14px"><img src="logo.png" alt="Maison Hair" class="logo-img" style="height:52px"></span>
+<span class="logo-chip" style="display:inline-flex;width:max-content"><img src="logo.png" alt="Maison Hair" class="logo-img" style="height:72px;max-height:72px"></span>
 <p>Salão de beleza e estética em Ipanema, Rio de Janeiro. Cortes, coloração e mechas, progressiva, tratamentos capilares, manicure, pedicure e estética facial. Transformamos sua beleza.</p>
 </div>
 <div class="foot-col">
