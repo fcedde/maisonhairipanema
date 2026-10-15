@@ -58,10 +58,10 @@ img{max-width:100%;display:block}
 
 /* Header */
 header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,11,9,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:.3s}
-.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:96px}
 .brand{display:flex;align-items:center;gap:11px}
 .logo-chip{background:transparent;border-radius:11px;padding:0;display:inline-flex;align-items:center;border:none;overflow:visible;box-shadow:none}
-.logo-img{height:64px;width:auto;display:block;max-height:64px}
+.logo-img{height:88px;width:auto;display:block;max-height:88px}
 .nav-links{display:flex;align-items:center;gap:30px}
 .nav-links a.lnk{font-weight:600;font-size:.94rem;color:var(--muted);transition:.2s}
 .nav-links a.lnk:hover{color:var(--ink)}
@@ -81,7 +81,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,11,9,.7
 
 /* Mobile nav panel */
 .mobile-nav{
-  position:fixed;top:76px;left:0;right:0;bottom:0;
+  position:fixed;top:96px;left:0;right:0;bottom:0;
   background:rgba(10,8,6,.97);backdrop-filter:blur(18px);
   z-index:45;padding:28px 22px 40px;
   display:flex;flex-direction:column;gap:8px;
@@ -233,6 +233,9 @@ footer{background:#0a0806;border-top:1px solid var(--line);padding:56px 0 28px}
 .nav-links .lnk{display:none}
 .menu-toggle{display:grid;place-items:center}
 .nav .btn-wa{display:none}
+.logo-img{height:72px;max-height:72px}
+.nav{height:86px}
+.mobile-nav{top:86px}
 }
 @media(max-width:560px){
 .grid{grid-template-columns:1fr}
@@ -241,7 +244,10 @@ footer{background:#0a0806;border-top:1px solid var(--line);padding:56px 0 28px}
 .promo .body{padding:30px 24px}
 .cta-band{padding:40px 22px}
 .foot-grid{grid-template-columns:1fr}
-.hero{padding-top:104px;padding-bottom:54px}
+.hero{padding-top:120px;padding-bottom:54px}
+.logo-img{height:58px;max-height:58px}
+.nav{height:72px}
+.mobile-nav{top:72px}
 .hero-inner{max-width:100%;margin:0 auto;text-align:center}
 .hero p.sub{margin-left:auto;margin-right:auto}
 .hero-cta{justify-content:center}
@@ -533,7 +539,7 @@ Book my appointment
 <div class="wrap">
 <div class="foot-grid">
 <div class="foot-brand">
-<span class="logo-chip" style="display:inline-flex;width:max-content"><img src="logo.png" alt="Maison Hair" class="logo-img" style="height:72px;max-height:72px"></span>
+<span class="logo-chip" style="display:inline-flex;width:max-content"><img src="logo.png" alt="Maison Hair" class="logo-img" style="height:100px;max-height:100px"></span>
 <p>Beauty salon and aesthetics in Ipanema, Rio de Janeiro. Cuts, color and highlights, Brazilian blowout, hair treatments, manicure, pedicure and facial aesthetics. We transform your beauty.</p>
 </div>
 <div class="foot-col">
