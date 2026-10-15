@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio C Master — Hair &amp; Spa | Salão de Beleza na Praia do Canto, Vitória/ES</title>
-<meta name="description" content="Salão de beleza completo na Praia do Canto, Vitória/ES: cortes e escova, coloração e mechas, penteados, maquiagem profissional, manicure e pedicure, spa e dia da noiva. Agende pelo WhatsApp.">
-<meta name="keywords" content="studio c master, salão de beleza praia do canto, salão de beleza vitória es, cabeleireiro praia do canto, mechas vitória es, loiro vitória es, maquiagem profissional vitória, maquiagem noiva vitória es, penteado para festa vitória, manicure praia do canto, pedicure vitória es, escova praia do canto, dia da noiva vitória, hair spa vitória, salão perto de mim">
-<meta name="author" content="Studio C Master — Hair &amp; Spa">
+<title>Maison Hair — Salão de Beleza em Ipanema, Rio de Janeiro</title>
+<meta name="description" content="Salão de beleza completo em Ipanema, Rio de Janeiro: balayage, mechas, cortes, progressiva, tratamentos capilares, manicure, pedicure e estética facial. Agende pelo WhatsApp.">
+<meta name="keywords" content="maison hair, salão de beleza ipanema, cabeleireiro ipanema, balayage rio de janeiro, mechas ipanema, progressiva ipanema, manicure ipanema, estética facial ipanema, salão visconde de pirajá, maisonhairrj">
+<meta name="author" content="Maison Hair">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://escalartime.site/studiocmaster/">
+<link rel="canonical" href="https://maisonhair.com.br/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Studio C Master — Hair &amp; Spa | Salão de Beleza na Praia do Canto, Vitória/ES">
-<meta property="og:description" content="Cortes, mechas e coloração, escova, penteados, maquiagem profissional, unhas e spa na Praia do Canto, Vitória/ES. Agende seu horário pelo WhatsApp.">
-<meta property="og:image" content="https://escalartime.site/studiocmaster/img/og.jpg">
-<meta property="og:url" content="https://escalartime.site/studiocmaster/">
+<meta property="og:title" content="Maison Hair — Salão de Beleza em Ipanema, Rio de Janeiro">
+<meta property="og:description" content="Balayage, mechas, cortes, progressiva, tratamentos capilares, unhas e estética facial em Ipanema. Transformamos sua beleza. Agende pelo WhatsApp.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:url" content="https://maisonhair.com.br/">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d0b09'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' font-weight='700' fill='%23C9A15E' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d0b09'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23C9A15E' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <meta name="theme-color" content="#0d0b09">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,16 +59,47 @@ img{max-width:100%;display:block}
 header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,11,9,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:.3s}
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
 .brand{display:flex;align-items:center;gap:11px}
-.logo-chip{background:#12100c;border-radius:11px;padding:5px 10px;display:inline-flex;align-items:center;border:1px solid var(--line2);overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.4)}
-.logo-img{height:44px;width:auto;display:block}
+.logo-chip{background:#12100c;border-radius:11px;padding:8px 14px;display:inline-flex;align-items:center;border:1px solid var(--line2);overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.logo-text{font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;color:var(--amber);letter-spacing:.02em}
 .nav-links{display:flex;align-items:center;gap:30px}
 .nav-links a.lnk{font-weight:600;font-size:.94rem;color:var(--muted);transition:.2s}
 .nav-links a.lnk:hover{color:var(--ink)}
 .nav .btn{padding:10px 18px;font-size:.92rem}
 
+/* Hamburger button (mobile only) */
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;border-radius:10px;color:var(--ink);transition:.2s}
+.menu-toggle:hover{background:rgba(255,255,255,.06)}
+.menu-toggle svg{width:26px;height:26px;display:block}
+.menu-toggle .icon-close{display:none}
+.menu-toggle.is-open .icon-open{display:none}
+.menu-toggle.is-open .icon-close{display:block}
+
+/* Mobile nav panel */
+.mobile-nav{
+  position:fixed;top:68px;left:0;right:0;bottom:0;
+  background:rgba(10,8,6,.97);backdrop-filter:blur(18px);
+  z-index:45;padding:28px 22px 40px;
+  display:flex;flex-direction:column;gap:8px;
+  transform:translateX(100%);opacity:0;visibility:hidden;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .3s,visibility .3s;
+  overflow-y:auto;
+}
+.mobile-nav.is-open{transform:translateX(0);opacity:1;visibility:visible}
+.mobile-nav a.mlnk{
+  display:flex;align-items:center;gap:14px;
+  font-family:'Playfair Display',serif;font-weight:700;font-size:1.45rem;
+  color:var(--ink);padding:16px 18px;border-radius:14px;
+  border:1px solid transparent;transition:.2s;
+}
+.mobile-nav a.mlnk:hover,.mobile-nav a.mlnk:focus{background:var(--card);border-color:var(--line2);color:var(--amber)}
+.mobile-nav .m-wa{margin-top:18px;justify-content:center;width:100%}
+.mobile-nav .m-info{margin-top:auto;padding-top:28px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;line-height:1.5}
+.mobile-nav .m-info a{color:var(--orange);font-weight:600}
+body.menu-open{overflow:hidden}
+
 /* Hero */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:120px 0 70px;overflow:hidden}
-.hero-bg{position:absolute;inset:0;z-index:0;background:url('img/hero.jpg') center 30%/cover no-repeat;transform:scale(1.04)}
+.hero-bg{position:absolute;inset:0;z-index:0;background:url('hero.jpg') center 30%/cover no-repeat;transform:scale(1.04)}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,8,6,.94) 0%,rgba(10,8,6,.78) 44%,rgba(10,8,6,.28) 100%),linear-gradient(0deg,rgba(10,8,6,.97) 2%,rgba(10,8,6,0) 46%)}
 .hero .wrap{position:relative;z-index:2;width:100%}
 .hero-inner{max-width:730px}
@@ -105,7 +136,7 @@ section{position:relative}
 
 /* Feature band */
 .feature{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
-.feature .media{border-radius:22px;overflow:hidden;border:1px solid var(--line2);position:relative;aspect-ratio:4/3}
+.feature .media{border-radius:22px;overflow:hidden;border:1px solid var(--line2);position:relative;aspect-ratio:4/3;background:var(--card)}
 .feature .media img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .feature .media .tagimg{position:absolute;left:16px;bottom:16px;background:rgba(13,11,9,.8);backdrop-filter:blur(6px);border:1px solid var(--line2);padding:8px 14px;border-radius:999px;font-size:.85rem;font-weight:600}
 .feature h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:800;margin:12px 0 16px}
@@ -124,20 +155,15 @@ section{position:relative}
 
 /* Noivas banner */
 .promo{display:grid;grid-template-columns:.92fr 1.08fr;gap:40px;align-items:center;background:linear-gradient(120deg,#0f0c09,#171208);border:1px solid var(--line2);border-radius:24px;overflow:hidden}
-.promo .media{position:relative;min-height:300px}
+.promo .media{position:relative;min-height:300px;background:var(--card)}
 .promo .media img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;object-position:center 25%}
 .promo .body{padding:42px 40px}
 .promo h2{font-size:clamp(1.6rem,3.4vw,2.35rem);font-weight:800;margin:12px 0 14px}
 .promo p{color:var(--muted);font-size:1.05rem;margin-bottom:22px}
 
-/* Videos */
-.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;margin:0 auto}
-.vcard{border-radius:18px;overflow:hidden;border:1px solid var(--line2);background:#000;aspect-ratio:9/16;position:relative;box-shadow:0 12px 34px rgba(0,0,0,.4)}
-.vcard video{width:100%;height:100%;object-fit:cover;display:block}
-
 /* Gallery */
 .gallery{display:grid;grid-template-columns:2fr 1fr;gap:18px}
-.gallery .g{border-radius:18px;overflow:hidden;border:1px solid var(--line);position:relative;min-height:230px}
+.gallery .g{border-radius:18px;overflow:hidden;border:1px solid var(--line);position:relative;min-height:230px;background:var(--card)}
 .gallery .g img{width:100%;height:100%;object-fit:cover;transition:.5s}
 .gallery .g:hover img{transform:scale(1.06)}
 .gallery .g .lbl{position:absolute;left:14px;bottom:12px;font-weight:700;background:rgba(13,11,9,.72);padding:6px 13px;border-radius:999px;font-size:.85rem;backdrop-filter:blur(5px)}
@@ -199,9 +225,8 @@ footer{background:#0a0806;border-top:1px solid var(--line);padding:56px 0 28px}
 .gallery{grid-template-columns:1fr}
 .foot-grid{grid-template-columns:1fr 1fr;gap:30px}
 .nav-links .lnk{display:none}
-}
-@media(max-width:680px){
-.videos{grid-template-columns:1fr;max-width:330px}
+.menu-toggle{display:grid;place-items:center}
+.nav .btn-wa{display:none}
 }
 @media(max-width:560px){
 .grid{grid-template-columns:1fr}
@@ -224,41 +249,61 @@ footer{background:#0a0806;border-top:1px solid var(--line);padding:56px 0 28px}
 <!-- HEADER -->
 <header id="top">
 <div class="wrap nav">
-<a href="#top" class="brand" aria-label="Studio C Master — Hair &amp; Spa">
-<span class="logo-chip"><img src="img/logo.png" alt="Studio C Master — Hair &amp; Spa, salão de beleza na Praia do Canto, Vitória ES" class="logo-img"></span>
+<a href="#top" class="brand" aria-label="Maison Hair — Salão de Beleza em Ipanema">
+<span class="logo-chip"><span class="logo-text">Maison Hair</span></span>
 </a>
-<nav class="nav-links">
+<nav class="nav-links" aria-label="Menu principal">
 <a href="#servicos" class="lnk">Serviços</a>
-<a href="#sobre" class="lnk">O Studio</a>
-<a href="#videos" class="lnk">Vídeos</a>
+<a href="#sobre" class="lnk">O Salão</a>
+<a href="#resultados" class="lnk">Resultados</a>
 <a href="#contato" class="lnk">Contato</a>
-<a href="https://wa.me/5527998704224?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Studio%20C%20Master%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="btn btn-wa" target="_blank" rel="noopener">
+<a href="https://wa.me/5521972326847?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Maison%20Hair%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="btn btn-wa" target="_blank" rel="noopener">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
 Agendar
 </a>
 </nav>
+<button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
+<svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+<svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+</button>
 </div>
 </header>
+
+<!-- MOBILE NAV -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile">
+<a href="#servicos" class="mlnk">Serviços</a>
+<a href="#sobre" class="mlnk">O Salão</a>
+<a href="#resultados" class="mlnk">Resultados</a>
+<a href="#contato" class="mlnk">Contato</a>
+<a href="https://wa.me/5521972326847?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Maison%20Hair%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="btn btn-wa m-wa" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+Agendar pelo WhatsApp
+</a>
+<div class="m-info">
+Rua Visconde de Pirajá, 550 — Ipanema<br>
+<a href="tel:+5521972326847">(21) 97232-6847</a>
+</div>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
 <div class="hero-bg"></div>
 <div class="wrap">
 <div class="hero-inner reveal">
-<span class="eyebrow">Praia do Canto · Vitória — ES</span>
-<h1>Seu salão de beleza <span class="grad-text">completo</span> na Praia do Canto</h1>
-<p class="sub">Cortes e escova, coloração e mechas, penteados, maquiagem profissional, manicure e pedicure — o <b>Studio C Master — Hair &amp; Spa</b> reúne tudo em um só lugar, com uma equipe especializada em cada detalhe da sua beleza.</p>
+<span class="eyebrow">Ipanema · Rio de Janeiro — RJ</span>
+<h1>Transformamos <span class="grad-text">sua beleza</span></h1>
+<p class="sub">Balayage, mechas, cortes, progressiva, tratamentos capilares, manicure, pedicure e estética facial — a <b>Maison Hair</b> reúne tudo em um só lugar no coração de Ipanema, com profissionais especializados em cada detalhe.</p>
 <div class="hero-cta">
-<a href="https://wa.me/5527998704224?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Studio%20C%20Master%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="btn btn-wa" target="_blank" rel="noopener">
+<a href="https://wa.me/5521972326847?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Maison%20Hair%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="btn btn-wa" target="_blank" rel="noopener">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
 Agendar pelo WhatsApp
 </a>
 <a href="#servicos" class="btn btn-ghost">Ver serviços</a>
 </div>
 <div class="hero-trust">
-<div class="trust-item">📍 Rua Joaquim Lírio, 48 — Praia do Canto</div>
-<div class="trust-item">⭐ 4,6 no Google · 109 avaliações</div>
-<div class="trust-item">📸 Mais de 3 mil trabalhos no Instagram</div>
+<div class="trust-item">📍 Rua Visconde de Pirajá, 550 — Ipanema</div>
+<div class="trust-item">⭐ 5,0 no Google · 50 avaliações</div>
+<div class="trust-item">📸 Mais de 200 trabalhos no Instagram</div>
 </div>
 </div>
 </div>
@@ -267,8 +312,8 @@ Agendar pelo WhatsApp
 <!-- TRUST STRIP -->
 <div class="strip">
 <div class="wrap row">
-<div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Praia do Canto, coração de Vitória/ES</div>
-<div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg> Hair &amp; Spa: tudo em um só lugar</div>
+<div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Ipanema, Zona Sul do Rio</div>
+<div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg> Cabelo, unhas e estética em um só lugar</div>
 <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg> Agendamento fácil pelo WhatsApp</div>
 </div>
 </div>
@@ -279,38 +324,38 @@ Agendar pelo WhatsApp
 <div class="sec-head center reveal">
 <span class="eyebrow">O que fazemos</span>
 <h2>Da raiz do cabelo<br>à ponta das unhas</h2>
-<p>Salão de beleza completo na Praia do Canto, em Vitória/ES — do corte e da cor à maquiagem, unhas e spa, com profissionais dedicados a cada especialidade.</p>
+<p>Salão de beleza completo em Ipanema — do corte e da cor aos tratamentos capilares, unhas e estética facial, com profissionais dedicados a cada especialidade.</p>
 </div>
 <div class="grid">
 <div class="svc reveal">
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"/></svg></div>
 <h3>Cortes &amp; Escova</h3>
-<p>Cortes femininos e masculinos, escova modelada e babyliss com acabamento impecável — pro dia a dia ou pra brilhar em um evento.</p>
+<p>Corte feminino, masculino e infantil, escova modelada e finalização impecável — pro dia a dia ou pra brilhar em um evento.</p>
 </div>
 <div class="svc reveal">
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2s6 6.5 6 11a6 6 0 01-12 0c0-4.5 6-11 6-11z"/></svg></div>
 <h3>Coloração &amp; Mechas</h3>
-<p>Loiros iluminados, morenas iluminadas e balayage com produtos profissionais e cuidado com a saúde dos fios.</p>
-</div>
-<div class="svc reveal">
-<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 9l4 4 5-7 5 7 4-4v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
-<h3>Penteados &amp; Produções</h3>
-<p>Coques, ondas e semi-presos para noivas, madrinhas, formandas e festas — penteados executados com precisão.</p>
-</div>
-<div class="svc reveal">
-<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-<h3>Maquiagem Profissional</h3>
-<p>Maquiagem social, para noivas e para fotos corporativas: pele impecável e realce natural de quem você já é.</p>
-</div>
-<div class="svc reveal">
-<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="9" y="10" width="6" height="11" rx="2"/><path d="M10 10V6a2 2 0 014 0v4"/><path d="M18 5l.9 2.4L21.3 8.3l-2.4.9L18 11.6l-.9-2.4-2.4-.9 2.4-.9z"/></svg></div>
-<h3>Unhas — Manicure &amp; Pedicure</h3>
-<p>Cuidado completo das mãos e dos pés, com esmaltação caprichada e profissionais atentas às suas preferências.</p>
+<p>Balayage, luzes, morena iluminada, coloração global, tonalização, matização e descoloração com produtos profissionais.</p>
 </div>
 <div class="svc reveal">
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M11 20A7 7 0 014 13c0-5 4-9 9-9 4 0 7 2 7 2s-1 3-1 6a7 7 0 01-8 8z"/><path d="M4 21c4-4 7-6 12-8"/></svg></div>
-<h3>Spa &amp; Tratamentos</h3>
-<p>Cronograma capilar, hidratações e spa dos pés: o momento de cuidado que você merece, do fio à sola.</p>
+<h3>Tratamentos Capilares</h3>
+<p>Hidratação, nutrição, reconstrução, cauterização, botox capilar e selagem térmica para fios saudáveis e brilhantes.</p>
+</div>
+<div class="svc reveal">
+<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 9l4 4 5-7 5 7 4-4v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+<h3>Progressiva &amp; Alisamento</h3>
+<p>Escova progressiva e alisamentos com técnicas modernas e cuidado com a saúde dos fios.</p>
+</div>
+<div class="svc reveal">
+<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="9" y="10" width="6" height="11" rx="2"/><path d="M10 10V6a2 2 0 014 0v4"/><path d="M18 5l.9 2.4L21.3 8.3l-2.4.9L18 11.6l-.9-2.4-2.4-.9 2.4-.9z"/></svg></div>
+<h3>Manicure &amp; Pedicure</h3>
+<p>Cuidado completo das mãos e dos pés, com esmaltação caprichada e profissionais atentas às suas preferências.</p>
+</div>
+<div class="svc reveal">
+<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+<h3>Estética Facial</h3>
+<p>Limpeza de pele e tratamentos faciais para uma pele radiante e bem cuidada.</p>
 </div>
 </div>
 </div>
@@ -320,39 +365,39 @@ Agendar pelo WhatsApp
 <section class="band" id="sobre" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 <div class="wrap feature">
 <div class="reveal">
-<span class="eyebrow">O Studio C Master</span>
+<span class="eyebrow">A Maison Hair</span>
 <h2>A sua beleza é<br>a nossa inspiração</h2>
-<p>Na <b>Rua Joaquim Lírio, na Praia do Canto</b>, o <b>Studio C Master — Hair &amp; Spa</b> reúne <b>cabelo</b>, <b>maquiagem</b>, <b>unhas</b> e <b>spa</b> em um só endereço, com profissionais dedicados a cada especialidade e um atendimento que cuida de cada detalhe — dos mimos personalizados ao resultado final.</p>
+<p>Na <b>Rua Visconde de Pirajá, em Ipanema</b>, a <b>Maison Hair</b> reúne <b>cabelo</b>, <b>unhas</b> e <b>estética facial</b> em um só endereço, com profissionais dedicados a cada especialidade e um atendimento que cuida de cada detalhe.</p>
 <ul class="checks">
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Equipe especializada por área: cabelo, make e unhas</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Produções completas para noivas, festas e ensaios</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Equipe especializada em cabelo, unhas e estética</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Técnicas modernas: balayage, mechas e tratamentos</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Agendamento com hora marcada pelo WhatsApp</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Mais de 3 mil trabalhos publicados no @studiocmaster</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Mais de 200 trabalhos publicados no @maisonhairrj</li>
 </ul>
-<a href="https://wa.me/5527998704224?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20C%20Master." class="btn btn-wa" target="_blank" rel="noopener">
+<a href="https://wa.me/5521972326847?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio%20na%20Maison%20Hair." class="btn btn-wa" target="_blank" rel="noopener">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-Falar com o Studio
+Falar com o salão
 </a>
 </div>
 <div class="media reveal">
-<img src="img/equipe-maquiagem.jpg" alt="Maquiadora do Studio C Master produzindo cliente no salão da Praia do Canto, Vitória ES" loading="lazy">
-<span class="tagimg">Bastidores — produção de maquiagem</span>
+<img src="equipe.jpg" alt="Equipe da Maison Hair no salão de Ipanema, Rio de Janeiro" loading="lazy">
+<span class="tagimg">Maison Hair — Ipanema</span>
 </div>
 </div>
 </section>
 
-<!-- NOIVAS PROMO -->
+<!-- PROMO -->
 <section class="band">
 <div class="wrap">
 <div class="promo reveal">
-<div class="media"><img src="img/maquiagem-glow.jpg" alt="Maquiagem e penteado para noivas e festas no Studio C Master, Vitória ES"></div>
+<div class="media"><img src="transformacao.jpg" alt="Transformação de cabelo e beleza na Maison Hair, Ipanema" loading="lazy"></div>
 <div class="body">
-<span class="eyebrow">Noivas, madrinhas &amp; festas</span>
-<h2>O seu grande dia começa aqui</h2>
-<p>Preparação completa para o seu dia mais especial: <b>penteado</b>, <b>maquiagem</b> e <b>unhas</b> no mesmo lugar, com hora marcada e uma equipe inteira cuidando de você — é só chegar, relaxar e sair pronta.</p>
-<a href="https://wa.me/5527998704224?text=Ol%C3%A1!%20Quero%20agendar%20uma%20produ%C3%A7%C3%A3o%20de%20noiva%20ou%20festa%20no%20Studio%20C%20Master." class="btn btn-wa" target="_blank" rel="noopener">
+<span class="eyebrow">Transformações &amp; cuidados</span>
+<h2>O seu momento de beleza começa aqui</h2>
+<p>Preparação completa para o seu dia: <b>corte</b>, <b>cor</b>, <b>tratamentos</b>, <b>unhas</b> e <b>estética</b> no mesmo lugar, com hora marcada e uma equipe cuidando de você — é só chegar, relaxar e sair pronta.</p>
+<a href="https://wa.me/5521972326847?text=Ol%C3%A1!%20Quero%20agendar%20uma%20transforma%C3%A7%C3%A3o%20na%20Maison%20Hair." class="btn btn-wa" target="_blank" rel="noopener">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-Agendar minha produção
+Agendar minha transformação
 </a>
 </div>
 </div>
@@ -363,14 +408,14 @@ Agendar minha produção
 <section class="band" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 <div class="wrap">
 <div class="sec-head center reveal">
-<span class="eyebrow">Por que o Studio C Master</span>
-<h2>Um studio inteiro dedicado a você</h2>
+<span class="eyebrow">Por que a Maison Hair</span>
+<h2>Um salão dedicado a você</h2>
 </div>
 <div class="diff-grid">
 <div class="diff reveal">
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-6 9 6v10a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 21V12h6v9"/></svg></div>
 <div class="n">Tudo em um só lugar</div>
-<p>Cabelo, maquiagem, unhas e spa no mesmo endereço, na Praia do Canto.</p>
+<p>Cabelo, unhas e estética facial no mesmo endereço, em Ipanema.</p>
 </div>
 <div class="diff reveal">
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
@@ -378,37 +423,15 @@ Agendar minha produção
 <p>Profissionais dedicados a cada área — do loiro perfeito à esmaltação.</p>
 </div>
 <div class="diff reveal">
-<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l4 4 5-7 5 7 4-4v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
-<div class="n">Produções completas</div>
-<p>Noivas, festas, formaturas e ensaios: você chega cliente e sai pronta.</p>
+<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.2H22l-6 4.8 2.3 7.2L12 16.8 5.7 21.2 8 14 2 9.2h7.6z"/></svg></div>
+<div class="n">Nota 5,0 no Google</div>
+<p>50 avaliações de clientes que confiam no nosso trabalho.</p>
 </div>
 <div class="diff reveal">
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-<div class="n">+3 mil publicações</div>
-<p>Trabalhos reais publicados no nosso Instagram @studiocmaster.</p>
+<div class="n">+200 publicações</div>
+<p>Trabalhos reais publicados no nosso Instagram @maisonhairrj.</p>
 </div>
-</div>
-</div>
-</section>
-
-<!-- VIDEOS -->
-<section class="band" id="videos">
-<div class="wrap">
-<div class="sec-head center reveal">
-<span class="eyebrow">O Studio em movimento</span>
-<h2>Por dentro do Studio C Master</h2>
-<p>Estrutura, bastidores e resultados — direto do nosso Instagram <b>@studiocmaster</b>.</p>
-</div>
-<div class="videos reveal">
-<div class="vcard"><video src="vid/tour.mp4" poster="vid/tour.jpg" controls playsinline preload="none" loop></video></div>
-<div class="vcard"><video src="vid/noiva.mp4" poster="vid/noiva.jpg" controls playsinline preload="none" loop></video></div>
-<div class="vcard"><video src="vid/corte.mp4" poster="vid/corte.jpg" controls playsinline preload="none" loop></video></div>
-</div>
-<div style="text-align:center;margin-top:30px" class="reveal">
-<a class="btn btn-ghost" href="https://www.instagram.com/studiocmaster/" target="_blank" rel="noopener">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
-Ver mais no Instagram
-</a>
 </div>
 </div>
 </section>
@@ -419,21 +442,27 @@ Ver mais no Instagram
 <div class="sec-head center reveal">
 <span class="eyebrow">Resultados</span>
 <h2>Beleza feita à mão, todos os dias</h2>
-<p>Uma amostra do que sai das cadeiras do Studio — tem muito mais no nosso Instagram.</p>
+<p>Uma amostra do que sai das cadeiras da Maison Hair — tem muito mais no nosso Instagram.</p>
 </div>
 <div class="gallery reveal">
-<div class="g"><img src="img/cabelo-mechas.jpg" alt="Mechas iluminadas e ondas feitas no Studio C Master, salão de beleza na Praia do Canto, Vitória ES" loading="lazy"><span class="lbl">Mechas &amp; coloração</span></div>
+<div class="g"><img src="mechas.jpg" alt="Mechas e balayage feitas na Maison Hair, salão de beleza em Ipanema" loading="lazy"><span class="lbl">Mechas &amp; Balayage</span></div>
 <div class="gallery-col">
-<div class="g"><img src="img/penteado-coque.jpg" alt="Penteado coque para festa feito no Studio C Master, Vitória ES" loading="lazy"><span class="lbl">Penteados para festas</span></div>
-<div class="g"><img src="img/unhas-cuidado.jpg" alt="Manicure profissional no Studio C Master, Praia do Canto" loading="lazy"><span class="lbl">Manicure &amp; pedicure</span></div>
+<div class="g"><img src="cortes.jpg" alt="Cortes de cabelo na Maison Hair, Ipanema" loading="lazy"><span class="lbl">Cortes</span></div>
+<div class="g"><img src="unhas.jpg" alt="Manicure e pedicure profissional na Maison Hair" loading="lazy"><span class="lbl">Manicure &amp; Pedicure</span></div>
 </div>
 </div>
 <div class="gallery reveal" style="margin-top:18px">
-<div class="g"><img src="img/fachada.jpg" alt="Fachada do Studio C Master Hair e Spa na Rua Joaquim Lírio, 48, Praia do Canto, Vitória ES" loading="lazy" style="object-position:center 12%"><span class="lbl">Nosso espaço — Praia do Canto</span></div>
+<div class="g"><img src="fachada.jpg" alt="Fachada da Maison Hair na Rua Visconde de Pirajá, Ipanema, Rio de Janeiro" loading="lazy" style="object-position:center 20%"><span class="lbl">Nosso espaço — Ipanema</span></div>
 <div class="gallery-col">
-<div class="g"><img src="img/cabelo-loiras.jpg" alt="Loiros iluminados feitos no Studio C Master, salão na Praia do Canto" loading="lazy"><span class="lbl">Loiros iluminados</span></div>
-<div class="g"><img src="img/maquiagem-social.jpg" alt="Maquiagem social profissional no Studio C Master, Vitória ES" loading="lazy"><span class="lbl">Maquiagem social</span></div>
+<div class="g"><img src="tratamentos.jpg" alt="Tratamentos capilares na Maison Hair, Ipanema" loading="lazy"><span class="lbl">Tratamentos capilares</span></div>
+<div class="g"><img src="estetica.jpg" alt="Estética facial na Maison Hair, Ipanema" loading="lazy"><span class="lbl">Estética facial</span></div>
 </div>
+</div>
+<div style="text-align:center;margin-top:30px" class="reveal">
+<a class="btn btn-ghost" href="https://www.instagram.com/maisonhairrj/" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+Ver mais no Instagram
+</a>
 </div>
 </div>
 </section>
@@ -443,30 +472,30 @@ Ver mais no Instagram
 <div class="wrap">
 <div class="sec-head reveal">
 <span class="eyebrow">Onde estamos</span>
-<h2>Visite o Studio na Praia do Canto</h2>
+<h2>Visite a Maison Hair em Ipanema</h2>
 </div>
 <div class="loc">
 <div class="map reveal">
-<iframe src="https://maps.google.com/maps?cid=1973175528159785459&output=embed" loading="lazy" title="Studio C Master no mapa — Rua Joaquim Lírio, 48, Praia do Canto, Vitória ES" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64432.116664461784!2d-43.283886178320294!3d-22.983725599999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd508e78ef25d%3A0xeb857f4ca346422d!2sMaison%20Hair%20%26%20Est%C3%A9tica%20l%20sal%C3%A3o%20de%20beleza%20l%20Ipanema%20RJ%20l%20Cabeleireiro%20l%20Esteticista%20l%20Manicure!5e1!3m2!1sen!2sbr!4v1792027922175!5m2!1sen!2sbr" loading="lazy" title="Maison Hair no mapa — Rua Visconde de Pirajá, 550, Ipanema, Rio de Janeiro" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
 </div>
 <div class="info-list reveal">
 <div class="info-row">
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-<div class="t"><b>Endereço</b><span>Rua Joaquim Lírio, 48 — Praia do Canto, Vitória/ES, CEP 29055-460<br><a href="https://www.google.com/maps?cid=1973175528159785459" target="_blank" rel="noopener">Ver no Google Maps →</a></span></div>
+<div class="t"><b>Endereço</b><span>Rua Visconde de Pirajá, 550 — Ipanema, Rio de Janeiro/RJ, CEP 22410-902<br><a href="https://www.google.com/maps?cid=0xeb857f4ca346422d" target="_blank" rel="noopener">Ver no Google Maps →</a></span></div>
 </div>
 <div class="info-row">
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-<div class="t"><b>WhatsApp &amp; Telefone</b><span><a href="https://wa.me/5527998704224" target="_blank" rel="noopener">(27) 99870-4224</a> &nbsp;·&nbsp; <a href="tel:+552732278714">(27) 3227-8714</a></span></div>
+<div class="t"><b>WhatsApp &amp; Telefone</b><span><a href="https://wa.me/5521972326847" target="_blank" rel="noopener">(21) 97232-6847</a> &nbsp;·&nbsp; <a href="tel:+552134960284">(21) 3496-0284</a></span></div>
 </div>
 <div class="info-row">
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-<div class="t"><b>Horário</b><span>Seg: 08h–19h &nbsp;·&nbsp; Ter a Sex: 08h–18h40 &nbsp;·&nbsp; Sáb: 08h–17h40 &nbsp;·&nbsp; Dom: fechado</span></div>
+<div class="t"><b>Horário</b><span>Terça a Sábado: 09h–19h &nbsp;·&nbsp; Segunda e Domingo: fechado</span></div>
 </div>
 <div class="info-row">
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></div>
-<div class="t"><b>Instagram</b><span><a href="https://www.instagram.com/studiocmaster/" target="_blank" rel="noopener">@studiocmaster</a> — mais de 3 mil trabalhos publicados</span></div>
+<div class="t"><b>Instagram</b><span><a href="https://www.instagram.com/maisonhairrj/" target="_blank" rel="noopener">@maisonhairrj</a> — mais de 200 trabalhos publicados</span></div>
 </div>
-<a href="https://wa.me/5527998704224?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Studio%20C%20Master%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="btn btn-wa" target="_blank" rel="noopener" style="margin-top:6px">
+<a href="https://wa.me/5521972326847?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Maison%20Hair%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="btn btn-wa" target="_blank" rel="noopener" style="margin-top:6px">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
 Agendar pelo WhatsApp
 </a>
@@ -481,7 +510,7 @@ Agendar pelo WhatsApp
 <div class="cta-band reveal">
 <h2>Pronta para o seu momento de beleza?</h2>
 <p>Agende seu horário pelo WhatsApp e deixe a nossa equipe cuidar do resto.</p>
-<a href="https://wa.me/5527998704224?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Studio%20C%20Master%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="btn btn-wa" target="_blank" rel="noopener">
+<a href="https://wa.me/5521972326847?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Maison%20Hair%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="btn btn-wa" target="_blank" rel="noopener">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
 Agendar meu horário
 </a>
@@ -494,40 +523,40 @@ Agendar meu horário
 <div class="wrap">
 <div class="foot-grid">
 <div class="foot-brand">
-<span class="logo-chip" style="display:inline-flex;width:max-content;padding:8px 14px"><img src="img/logo.png" alt="Studio C Master — Hair &amp; Spa" style="height:52px;width:auto;display:block"></span>
-<p>Salão de beleza e spa na Praia do Canto, Vitória/ES. Cortes, coloração e mechas, escova, penteados, maquiagem profissional, manicure, pedicure e tratamentos. A sua beleza é a nossa inspiração.</p>
+<span class="logo-chip" style="display:inline-flex;width:max-content;padding:8px 14px"><span class="logo-text">Maison Hair</span></span>
+<p>Salão de beleza e estética em Ipanema, Rio de Janeiro. Cortes, coloração e mechas, progressiva, tratamentos capilares, manicure, pedicure e estética facial. Transformamos sua beleza.</p>
 </div>
 <div class="foot-col">
 <h4>Serviços</h4>
 <a href="#servicos">Cortes &amp; Escova</a>
 <a href="#servicos">Coloração &amp; Mechas</a>
-<a href="#servicos">Penteados &amp; Produções</a>
-<a href="#servicos">Maquiagem Profissional</a>
+<a href="#servicos">Tratamentos Capilares</a>
+<a href="#servicos">Progressiva &amp; Alisamento</a>
 <a href="#servicos">Manicure &amp; Pedicure</a>
-<a href="#servicos">Spa &amp; Tratamentos</a>
+<a href="#servicos">Estética Facial</a>
 </div>
 <div class="foot-col">
 <h4>Contato</h4>
-<a href="https://wa.me/5527998704224" target="_blank" rel="noopener">WhatsApp (27) 99870-4224</a>
-<a href="tel:+552732278714">(27) 3227-8714</a>
-<p>Rua Joaquim Lírio, 48 — Praia do Canto, Vitória/ES</p>
-<p>Seg a Sáb, a partir das 08h · Dom: fechado</p>
+<a href="https://wa.me/5521972326847" target="_blank" rel="noopener">WhatsApp (21) 97232-6847</a>
+<a href="tel:+552134960284">(21) 3496-0284</a>
+<p>Rua Visconde de Pirajá, 550 — Ipanema, Rio de Janeiro/RJ</p>
+<p>Ter a Sáb, 09h–19h · Seg e Dom: fechado</p>
 <div class="social">
-<a href="https://www.instagram.com/studiocmaster/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
-<a href="https://www.google.com/maps?cid=1973175528159785459" target="_blank" rel="noopener" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
-<a href="https://wa.me/5527998704224" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+<a href="https://www.instagram.com/maisonhairrj/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+<a href="https://www.google.com/maps?cid=0xeb857f4ca346422d" target="_blank" rel="noopener" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
+<a href="https://wa.me/5521972326847" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
 </div>
 </div>
 </div>
 <div class="foot-bottom">
-<span>© 2026 Studio C Master — Hair &amp; Spa · Salão de Beleza · Praia do Canto, Vitória/ES</span>
-<span><a href="links/">Link na bio</a></span>
+<span>© 2026 Maison Hair · Salão de Beleza · Ipanema, Rio de Janeiro/RJ</span>
+<span></span>
 </div>
 </div>
 </footer>
 
 <!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/5527998704224?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Studio%20C%20Master%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="fab" target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">
+<a href="https://wa.me/5521972326847?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Maison%20Hair%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="fab" target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
 </a>
 
@@ -536,30 +565,27 @@ Agendar meu horário
 {
 "@context":"https://schema.org",
 "@type":"BeautySalon",
-"name":"Studio C Master - Hair & Spa",
-"alternateName":"Studio C Master",
-"description":"Salão de beleza completo na Praia do Canto, Vitória/ES: cortes e escova, coloração e mechas, penteados, maquiagem profissional, manicure e pedicure, spa e produções para noivas e festas.",
-"image":"https://escalartime.site/studiocmaster/img/og.jpg",
-"url":"https://escalartime.site/studiocmaster/",
-"telephone":"+55-27-3227-8714",
+"name":"Maison Hair",
+"alternateName":"Maison Hair & Estética",
+"description":"Salão de beleza completo em Ipanema, Rio de Janeiro: balayage, mechas, cortes, progressiva, tratamentos capilares, manicure, pedicure e estética facial.",
+"url":"https://maisonhair.com.br/",
+"telephone":"+55-21-3496-0284",
 "priceRange":"$$",
-"address":{"@type":"PostalAddress","streetAddress":"Rua Joaquim Lírio, 48","addressLocality":"Vitória","addressRegion":"ES","postalCode":"29055-460","addressCountry":"BR"},
-"geo":{"@type":"GeoCoordinates","latitude":-20.300394,"longitude":-40.295094},
-"areaServed":["Praia do Canto","Vitória","Vila Velha","Serra","Cariacica","Grande Vitória","Espírito Santo"],
+"address":{"@type":"PostalAddress","streetAddress":"Rua Visconde de Pirajá, 550","addressLocality":"Rio de Janeiro","addressRegion":"RJ","postalCode":"22410-902","addressCountry":"BR"},
+"geo":{"@type":"GeoCoordinates","latitude":-22.9837,"longitude":-43.2117},
+"areaServed":["Ipanema","Leblon","Copacabana","Zona Sul","Rio de Janeiro"],
 "openingHoursSpecification":[
-{"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"08:00","closes":"19:00"},
-{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:40"},
-{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"17:40"}
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"19:00"}
 ],
-"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"109"},
-"sameAs":["https://www.instagram.com/studiocmaster/","https://www.google.com/maps?cid=1973175528159785459"],
+"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"50"},
+"sameAs":["https://www.instagram.com/maisonhairrj/"],
 "makesOffer":[
-{"@type":"Offer","itemOffered":{"@type":"Service","name":"Cortes femininos e masculinos e escova"}},
-{"@type":"Offer","itemOffered":{"@type":"Service","name":"Coloração, mechas e balayage"}},
-{"@type":"Offer","itemOffered":{"@type":"Service","name":"Penteados para noivas e festas"}},
-{"@type":"Offer","itemOffered":{"@type":"Service","name":"Maquiagem profissional"}},
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Cortes femininos, masculinos e infantis e escova"}},
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Balayage, mechas, coloração e tonalização"}},
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tratamentos capilares e botox"}},
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Progressiva e alisamento"}},
 {"@type":"Offer","itemOffered":{"@type":"Service","name":"Manicure e pedicure"}},
-{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tratamentos capilares e spa"}}
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Estética facial e limpeza de pele"}}
 ]
 }
 </script>
@@ -568,7 +594,20 @@ Agendar meu horário
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 addEventListener('scroll',()=>{document.querySelector('header').style.boxShadow=scrollY>30?'0 6px 24px rgba(0,0,0,.4)':'none'});
+
+/* Mobile menu */
+const toggle=document.getElementById('menuToggle');
+const mobileNav=document.getElementById('mobileNav');
+function setMenu(open){
+  toggle.classList.toggle('is-open',open);
+  mobileNav.classList.toggle('is-open',open);
+  document.body.classList.toggle('menu-open',open);
+  toggle.setAttribute('aria-expanded',open);
+  toggle.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+}
+toggle.addEventListener('click',()=>setMenu(!toggle.classList.contains('is-open')));
+mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
 </script>
 </body>
 </html>
-
