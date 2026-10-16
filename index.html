@@ -58,10 +58,10 @@ img{max-width:100%;display:block}
 
 /* Header */
 header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,11,9,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:.3s}
-.nav{display:flex;align-items:center;justify-content:space-between;height:96px}
-.brand{display:flex;align-items:center;gap:11px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:120px}
+.brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
 .logo-chip{background:transparent;border-radius:11px;padding:0;display:inline-flex;align-items:center;border:none;overflow:visible;box-shadow:none}
-.logo-img{height:88px;width:auto;display:block;max-height:88px}
+.logo-img{height:160px;width:auto;display:block;max-height:160px;object-fit:contain}
 .nav-links{display:flex;align-items:center;gap:30px}
 .nav-links a.lnk{font-weight:600;font-size:.94rem;color:var(--muted);transition:.2s}
 .nav-links a.lnk:hover{color:var(--ink)}
@@ -81,7 +81,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,11,9,.7
 
 /* Mobile nav panel */
 .mobile-nav{
-  position:fixed;top:96px;left:0;right:0;bottom:0;
+  position:fixed;top:120px;left:0;right:0;bottom:0;
   background:rgba(10,8,6,.97);backdrop-filter:blur(18px);
   z-index:45;padding:28px 22px 40px;
   display:flex;flex-direction:column;gap:8px;
@@ -103,7 +103,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,11,9,.7
 body.menu-open{overflow:hidden}
 
 /* Hero */
-.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:120px 0 70px;overflow:hidden}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:150px 0 70px;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0;background:url('hero.jpg') center 30%/cover no-repeat;transform:scale(1.04)}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,8,6,.94) 0%,rgba(10,8,6,.78) 44%,rgba(10,8,6,.28) 100%),linear-gradient(0deg,rgba(10,8,6,.97) 2%,rgba(10,8,6,0) 46%)}
 .hero .wrap{position:relative;z-index:2;width:100%}
@@ -187,12 +187,13 @@ section{position:relative}
 .info-row .t span{color:var(--muted);font-size:.96rem}
 .info-row .t a{color:var(--orange);font-weight:600}
 
-/* CTA band */
-.cta-band{background:var(--grad);border-radius:28px;padding:54px 44px;text-align:center;color:#241a0d;position:relative;overflow:hidden}
-.cta-band h2{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;color:#241a0d;margin-bottom:12px}
-.cta-band p{font-size:1.1rem;font-weight:600;color:#43331a;margin-bottom:26px;opacity:.95}
-.cta-band .btn-wa{background:#0d0b09;color:#fff;box-shadow:0 12px 36px rgba(0,0,0,.3);filter:none}
-.cta-band .btn-wa:hover{background:#000;filter:none}
+/* CTA band — fundo dourado, card escuro, botão dourado */
+.cta-wrap{background:var(--grad);border-radius:28px;padding:28px;position:relative}
+.cta-band{background:var(--card);border:1px solid var(--line2);border-radius:22px;padding:54px 44px;text-align:center;color:var(--ink);position:relative;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.cta-band h2{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;color:var(--ink);margin-bottom:12px}
+.cta-band p{font-size:1.1rem;font-weight:600;color:var(--muted);margin-bottom:26px;opacity:.95}
+.cta-band .btn-wa{background:var(--grad);color:#241a0d;box-shadow:0 8px 28px rgba(201,161,94,.4);filter:none}
+.cta-band .btn-wa:hover{filter:brightness(1.08);box-shadow:0 12px 36px rgba(201,161,94,.55)}
 
 /* Footer */
 footer{background:#0a0806;border-top:1px solid var(--line);padding:56px 0 28px}
@@ -233,9 +234,9 @@ footer{background:#0a0806;border-top:1px solid var(--line);padding:56px 0 28px}
 .nav-links .lnk{display:none}
 .menu-toggle{display:grid;place-items:center}
 .nav .btn-wa{display:none}
-.logo-img{height:72px;max-height:72px}
-.nav{height:86px}
-.mobile-nav{top:86px}
+.logo-img{height:120px;max-height:120px}
+.nav{height:100px}
+.mobile-nav{top:100px}
 }
 @media(max-width:560px){
 .grid{grid-template-columns:1fr}
@@ -244,10 +245,10 @@ footer{background:#0a0806;border-top:1px solid var(--line);padding:56px 0 28px}
 .promo .body{padding:30px 24px}
 .cta-band{padding:40px 22px}
 .foot-grid{grid-template-columns:1fr}
-.hero{padding-top:120px;padding-bottom:54px}
-.logo-img{height:58px;max-height:58px}
-.nav{height:72px}
-.mobile-nav{top:72px}
+.hero{padding-top:130px;padding-bottom:54px}
+.logo-img{height:90px;max-height:90px}
+.nav{height:88px}
+.mobile-nav{top:88px}
 .hero-inner{max-width:100%;margin:0 auto;text-align:center}
 .hero p.sub{margin-left:auto;margin-right:auto}
 .hero-cta{justify-content:center}
@@ -523,13 +524,15 @@ Agendar pelo WhatsApp
 <!-- CTA BAND -->
 <section class="band" style="padding-top:0">
 <div class="wrap">
-<div class="cta-band reveal">
+<div class="cta-wrap reveal">
+<div class="cta-band">
 <h2>Pronta para o seu momento de beleza?</h2>
 <p>Agende seu horário pelo WhatsApp e deixe a nossa equipe cuidar do resto.</p>
 <a href="https://wa.me/5521972326847?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Maison%20Hair%20e%20quero%20agendar%20um%20hor%C3%A1rio." class="btn btn-wa" target="_blank" rel="noopener">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.913zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
 Agendar meu horário
 </a>
+</div>
 </div>
 </div>
 </section>
@@ -539,7 +542,7 @@ Agendar meu horário
 <div class="wrap">
 <div class="foot-grid">
 <div class="foot-brand">
-<span class="logo-chip" style="display:inline-flex;width:max-content"><img src="logo.png" alt="Maison Hair" class="logo-img" style="height:100px;max-height:100px"></span>
+<span class="logo-chip" style="display:inline-flex;width:max-content"><img src="logo.png" alt="Maison Hair" class="logo-img" style="height:160px;max-height:160px"></span>
 <p>Salão de beleza e estética em Ipanema, Rio de Janeiro. Cortes, coloração e mechas, progressiva, tratamentos capilares, manicure, pedicure e estética facial. Transformamos sua beleza.</p>
 </div>
 <div class="foot-col">
